@@ -1,7 +1,9 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   font-size: 16px;
   line-height: 1;
+  box-sizing: border-box;
+  background: #545454;
 }
 
 textarea{
@@ -13,62 +15,24 @@ textarea{
   padding: 10px;
 }
 
-.jumbotron {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 1rem;
-
-}
-
-.description{
-  white-space: pre-wrap;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
+.header{
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: #000000 solid 0.2rem;
+  border-radius: 1rem;
+  margin: 1rem;
 }
 
-.present {
-  background-color: #ff6961;
-  color: white;
+h1 {
+  font-size: 6rem;
 }
 
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+.header-small {
+  font-size: 2rem;
 }
 
 form {
@@ -81,10 +45,96 @@ form {
 }
 
 form>input {
-  width: 25%;
+  width: 15%;
  text-align: center;
+ border-radius: 10px;
+ height: 3rem;
+ border: 0.25rem solid white;
+ transition: all .3s ease-in-out;
+ font-size: 1.7rem;
+ background: transparent;
+ color: white;
 }
 
 input::placeholder{
   text-align: center;
+  font-size: 1.25rem;
+}
+
+.updateBtn {
+  background-color: #226822;
+  border: #000000 0.25rem solid;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 10%;
+  transition: all .3s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.updateBtn:hover {
+  background-color: #3eb93e;
+  transition: all .3s ease-in-out;
+  border-radius: 1.5rem;
+}
+
+#currentDay {
+  font-size: 2.5rem;
+}
+
+.description{
+  white-space: pre-wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+}
+
+.time-block{
+  text-align: center;
+  border-radius: 1.1rem;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 6rem;
+  border: 2px solid black;
+  transition: all 100ms ease-in-out;
+  margin: 1rem;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 1rem 0 0 1rem ;
+}
+
+.past {
+  background-color: #d3d3d3;
+}
+
+.present {
+  background-color: #ff6961;
+}
+
+.future {
+  background-color: #77dd77;
+}
+
+.saveBtn {
+  font-size: 1.5rem;
+  font-family: 'Bebas Neue', cursive;
+  border-radius: 0 0.8rem 0.8rem 0 ;
+  color: white;
+  transition: all 400ms ease-in-out;
+  background-color: #0000FF;
+  border-left: transparent 2px dashed;
+}
+
+.saveBtn:hover {
+  color: #000000;
+  background-color: #3eb93e;
+  transition: all 400ms ease-in-out;
+  border-left: #000000 2px dashed;
 }

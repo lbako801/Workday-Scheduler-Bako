@@ -52,7 +52,7 @@ function makeSchedule() {
       const row = `<div class='row time-block ${hourClass}' id='${i}'>
                     <div class='hour col-1'>${luxon.DateTime.fromObject({hour: i}).toLocaleString(luxon.DateTime.TIME_SIMPLE)}</div>
                     <textarea class='description col-10' id='input' data-id='${i}'>${userEnteredTasks[i]}</textarea>
-                    <button class='btn saveBtn col-1' data-id='${i}'>Save</button>
+                    <button class='btn saveBtn col-1' data-id='${i}'>SAVE</button>
                   </div>`;
   
       $(".container").append(row); // Adds row!

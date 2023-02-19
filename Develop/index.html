@@ -8,31 +8,23 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">Select working hours below to create a schedule!</p>
+    <header class="header">
+      <h1 >WORK DAY SCHEDULER</h1>
+      <p class="header-small"> - SELECT HOURS BELOW -</p>
       
       <form id="hours-form">
         <input type="number" id="open-time" placeholder="Enter Open Time (24hr)" min="0" max="24">
         <input type="number" id="close-time" placeholder="Enter Close Time(24hr)" min="0" max="24">
-        <button type="submit">Update Hours</button>
+        <button type="submit" class="updateBtn">Update Hours</button>
       </form>
-      <p id="currentDay" class="lead"></p>
+
+      <p id="currentDay"></p>
     </header>
 
     <div class="container" id="task-container">
