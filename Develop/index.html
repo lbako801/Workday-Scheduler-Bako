@@ -25,11 +25,17 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="lead">Select working hours below to create a schedule!</p>
+      
+      <form id="hours-form">
+        <input type="number" id="open-time" placeholder="Enter Open Time (24hr)" min="0" max="24">
+        <input type="number" id="close-time" placeholder="Enter Close Time(24hr)" min="0" max="24">
+        <button type="submit">Update Hours</button>
+      </form>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+
+    <div class="container" id="task-container">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
