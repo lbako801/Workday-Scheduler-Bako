@@ -5,16 +5,33 @@ const currentDate = new Date();
 const dayOfWeek = currentDate.toLocaleString('default', { weekday: 'long' });
 const month = currentDate.toLocaleString('default', { month: 'long' });
 
+
 // grab day
 const dayOfMonth = currentDate.getDate();
 
-// set the text content of the h2 element
+// set the text content of the date and time element
 const currentDayElement = document.getElementById('currentDay');
-currentDayElement.textContent = `${dayOfWeek}, ${month} ${dayOfMonth}`;
+
+currentDayElement.textContent = `Today is: ${dayOfWeek}, ${month} ${dayOfMonth}`;
+
+// get the current time in luxon.DateTime format
+const currentTime = luxon.DateTime.now();
+
+// format the time in 12-hour and 24-hour format
+const currentTime12hr = currentTime.toLocaleString(luxon.DateTime.TIME_SIMPLE);
+
+const currentTime24hr = currentTime.toFormat('HH:mm');
+
+// update the text content of the HTML element with the combined string
+const currentTimeElement = document.getElementById('currentTime');
+
+currentTimeElement.textContent = `Current Time: ${currentTime12hr} / ${currentTime24hr}`;
 
 // get open and close times
 const openTimeElement = document.getElementById("open-time");
+
 const closeTimeElement = document.getElementById("close-time");
+
 
 let openTime = openTimeElement.value;
 let closeTime = closeTimeElement.value;
@@ -41,6 +58,7 @@ function makeSchedule() {
   const currentHour = luxon.DateTime.now().hour;
   const currentDate = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATE_FULL);
   const dateTitle = $(".current-date").text(currentDate);
+  const hourTitle = $
   
   // Loop through each hour in selected range and make task elements
   for(let i = openTime; i < closeTime; i++){
@@ -65,10 +83,6 @@ function makeSchedule() {
   });
 }
 
-//call current hour function
-setCurrentHour();
-
-// function to set the current hour textarea to 'present'
 function setCurrentHour() {
   const currentHour = luxon.DateTime.now().hour;
   const currentHourTextArea = $(`#input-${currentHour}`);
@@ -77,4 +91,5 @@ function setCurrentHour() {
   }
 }
 
+setCurrentHour();
 makeSchedule();
